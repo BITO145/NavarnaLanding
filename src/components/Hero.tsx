@@ -53,7 +53,6 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeService, setActiveService] = useState<number | null>(null);
   const [showVideo, setShowVideo] = useState(false);
-  const [showBitoHighlight, setShowBitoHighlight] = useState(true);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -146,15 +145,15 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
+      <div className="container mx-auto px-4 pt-32 md:pt-0 pb-20 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen">
             {/* Left Content */}
-            <div className="space-y-8">
+            <div className="space-y-5 md:space-y-10">
               {/* Badge with Bito Jobs Highlight */}
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 text-indigo-700 px-6 py-3 rounded-full border border-indigo-200 shadow-lg mb-4">
                 <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                <span className="font-semibold text-sm uppercase tracking-wider">
+                <span className="font-semibold text-xs uppercase md:tracking-wider">
                   Excellence in Business Solutions
                 </span>
               </div>
@@ -209,7 +208,7 @@ const Hero = () => {
               )}*/}
 
               {/* Main Heading */}
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-2xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight">
                 Your Strategic Partner in{" "}
                 <span className="block mt-2">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-orange-600">
@@ -219,7 +218,7 @@ const Hero = () => {
               </h1>
 
               {/* Description */}
-              <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
+              <p className="text-md md:text-xl text-gray-600 leading-relaxed max-w-2xl">
                 Navarna delivers comprehensive solutions across staffing,
                 IT/ITES, BPO services, manpower management, and FMCG. We
                 prioritize innovation, quality, and client satisfaction to meet
@@ -235,7 +234,10 @@ const Hero = () => {
                   "Proven Track Record",
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <circle cx="12" cy="12" r="12" fill="#fe1400" />
+                      <path d="M8.5 12.5l2 2 5-5" stroke="#fff" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
                     <span className="text-gray-700 font-medium">{feature}</span>
                   </div>
                 ))}
@@ -243,12 +245,12 @@ const Hero = () => {
 
               {/* CTA Buttons with Bito Jobs Primary */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold rounded-full px-12 py-5 inline-flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group text-lg">
+                <button className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold rounded-full px-5 py-5 inline-flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group">
                   <Star className="mr-2 w-5 h-5" />
                   Try Bito Jobs Free
                   <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-full px-10 py-4 inline-flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group text-lg">
+                <button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-full px-5 py-5 inline-flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group">
                   Explore Services
                   <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -259,7 +261,10 @@ const Hero = () => {
                 <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-full px-4 py-2 border border-indigo-200">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">
-                      <CheckCircle className="w-4 h-4 text-white" />
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="12" fill="#fe1400" />
+                        <path d="M8.5 12.5l2 2 5-5" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                      </svg>
                     </div>
                     <span className="text-sm text-indigo-700 font-semibold">
                       Bito Jobs: 4.8★ Rating
@@ -297,7 +302,11 @@ const Hero = () => {
                         className="absolute inset-0 flex items-center justify-center group"
                       >
                         <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300">
-                          <Play className="w-10 h-10 text-white ml-1" />
+                          <svg className="w-10 h-10 ml-1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <title>Play video</title>
+                            <circle cx="32" cy="32" r="32" fill="#fe1400" />
+                            <polygon points="26,20 26,44 46,32" fill="#fff" />
+                          </svg>
                         </div>
                       </button>
                     </div>
@@ -305,43 +314,12 @@ const Hero = () => {
                     <iframe
                       width="100%"
                       height="100%"
-                      src="https://www.youtube.com/embed/p8eqNrDibps?autoplay=1"
-                      title="Company Overview"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      src="https://www.youtube.com/embed/OOHLzfEfaXk?autoplay=1&rel=0"
+                      title="Navarna Group Intro"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
-                      className="w-full h-full"
                     ></iframe>
                   )}
-                </div>
-
-                {/* Floating Stats Cards */}
-                <div className="absolute -top-6 -right-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
-                      <TrendingUp className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-900">95% Success</p>
-                      <p className="text-sm text-gray-600">
-                        Client Satisfaction
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center">
-                      <Users className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-900">50K+ Staff</p>
-                      <p className="text-sm text-gray-600">
-                        Placed Successfully
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -399,7 +377,10 @@ const Hero = () => {
                         key={featureIndex}
                         className="flex items-center gap-3"
                       >
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                          <circle cx="12" cy="12" r="12" fill="#fe1400" />
+                          <path d="M8.5 12.5l2 2 5-5" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                        </svg>
                         <span className="text-sm text-gray-700 font-medium">
                           {feature}
                         </span>
