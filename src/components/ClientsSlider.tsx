@@ -82,6 +82,18 @@ const clientLogos = [
     industry: "Agriculture",
     partnership: "3+ years",
   },
+  {
+    src: "/client/HomeLogo13.png",
+  },
+  {
+    src: "/client/HomeLogo14.png",
+  },
+  {
+    src: "/client/HomeLogo15.png",
+  },
+  {
+    src: "/client/HomeLogo16.png",
+  }
 ];
 
 const clientStats = [
@@ -120,7 +132,6 @@ export default function ClientsSlider() {
     loop: true,
     align: "center",
     slidesToScroll: 1,
-    speed: 10,
   });
   const [testimonialRef, testimonialApi] = useEmblaCarousel({
     loop: true,
@@ -259,29 +270,6 @@ export default function ClientsSlider() {
           </p>
         </div>
 
-        {/* Client Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto">
-          {clientStats.map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <div key={stat.label} className="text-center group">
-                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-indigo-200 transform hover:-translate-y-2">
-                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                    {counters[index]}
-                    {stat.suffix}
-                  </div>
-                  <p className="text-gray-600 font-medium text-sm">
-                    {stat.label}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
         {/* Client Logos Carousel */}
         <div className="relative mb-16">
           <div className="text-center mb-8">
@@ -312,33 +300,8 @@ export default function ClientsSlider() {
                         <img
                           src={client.src}
                           alt={client.name}
-                          className="max-h-16 max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
+                          className="max-h-20 w-[100px] object-contain transition-transform duration-300 group-hover:scale-110"
                         />
-                      </div>
-
-                      {/* Client Info - Shows on Hover */}
-                      <div
-                        className={`absolute inset-x-4 bottom-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 border border-gray-200 shadow-lg transform transition-all duration-300 ${
-                          activeClient === index
-                            ? "opacity-100 translate-y-0"
-                            : "opacity-0 translate-y-4 pointer-events-none"
-                        }`}
-                      >
-                        <h4 className="font-bold text-gray-900 text-sm mb-1">
-                          {client.name}
-                        </h4>
-                        <p className="text-xs text-gray-600 mb-1">
-                          {client.industry}
-                        </p>
-                        <div className="flex items-center justify-between text-xs">
-                          <span className="text-indigo-600 font-medium">
-                            {client.partnership}
-                          </span>
-                          <div className="flex items-center gap-1">
-                            <Star className="w-3 h-3 text-yellow-400 fill-current" />
-                            <span className="text-gray-600">5.0</span>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -435,7 +398,7 @@ export default function ClientsSlider() {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes spin-slow {
           from {
             transform: rotate(0deg);

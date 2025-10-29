@@ -439,7 +439,7 @@ const Hero = () => {
         </svg>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes spin-slow {
           from {
             transform: rotate(0deg);

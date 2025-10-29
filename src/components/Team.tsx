@@ -16,58 +16,35 @@ const team = [
   {
     name: "Amresh Kumar Mishra",
     role: "Managing Director",
-    image: "https://navarna.com/public/assetsfront/img/4.jpg",
-    experience: "15+ Years",
-    location: "Bangalore",
-    specialization: "Operations Management",
+    image: "/Team/Amresh.jpg",
     achievements: "Managed 1000+ workforce",
     linkedin: "#",
     twitter: "#",
     email: "amresh@navarna.com",
     phone: "+91-9876543213",
-    bio: "Operations excellence leader with expertise in scaling businesses and managing large teams.",
     gradient: "from-orange-500 to-red-500",
     bgColor: "bg-orange-50",
   },
   {
     name: "Anil Pratham, Ex. DGP Gujarat",
     role: "Advisor to Board",
-    image: "https://navarna.com/public/assetsfront/img/33.jpg",
+    image: "/Team/DGP.jpg",
     experience: "25+ Years",
     location: "Ahmedabad",
-    specialization: "Security & Compliance",
     achievements: "40+ years in public service",
     linkedin: "#",
     twitter: "#",
     email: "anil@navarna.com",
     phone: "+91-9876543212",
-    bio: "Distinguished public servant bringing security expertise and regulatory compliance knowledge.",
     gradient: "from-green-500 to-emerald-500",
     bgColor: "bg-green-50",
   },
   {
-    name: "Pravin Kumar",
-    role: "Chairman",
-    image: "https://navarna.com/public/assetsfront/img/11.jpg",
-    experience: "20+ Years",
-    location: "New Delhi",
-    specialization: "Strategic Leadership",
-    achievements: "Led 500+ successful projects",
-    linkedin: "#",
-    twitter: "#",
-    email: "pravin@navarna.com",
-    phone: "+91-9876543210",
-    bio: "Visionary leader with extensive experience in strategic planning and business development.",
-    gradient: "from-blue-500 to-indigo-600",
-    bgColor: "bg-blue-50",
-  },
-  {
     name: "Ashutosh Mourya",
-    role: "Alliance Director",
-    image: "https://navarna.com/public/assetsfront/img/8.jpg",
+    role: "Chief Executive Officer of IT/ITES",
+    image: "/Team/Ashutosh.jpg",
     experience: "13+ Years",
     location: "Hyderabad",
-    specialization: "Client Relations",
     achievements: "Maintained 98% client retention",
     linkedin: "#",
     twitter: "#",
@@ -80,16 +57,14 @@ const team = [
   {
     name: "G.R. Pradhan",
     role: "Alliance Director",
-    image: "https://navarna.com/public/assetsfront/img/7.jpg",
+    image: "/Team/Pradhan.jpg",
     experience: "16+ Years",
     location: "Chennai",
-    specialization: "Market Development",
     achievements: "Expanded to 25+ cities",
     linkedin: "#",
     twitter: "#",
     email: "gr@navarna.com",
     phone: "+91-9876543216",
-    bio: "Market development specialist with extensive experience in geographical expansion and growth.",
     gradient: "from-yellow-500 to-orange-500",
     bgColor: "bg-yellow-50",
   },
@@ -294,13 +269,6 @@ const Team = () => {
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                    {/* Experience Badge */}
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-4 group-hover:translate-x-0">
-                      <span className="text-sm font-bold text-indigo-600">
-                        {member.experience}
-                      </span>
-                    </div>
-
                     {/* Social Links - Appear on Hover */}
                     <div className="absolute bottom-4 left-4 right-4 flex justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
                       <button className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 hover:bg-white/30 transition-all duration-200">
@@ -333,30 +301,6 @@ const Team = () => {
                       >
                         {member.role}
                       </p>
-
-                      {/* Location */}
-                      <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
-                        <MapPin className="w-4 h-4" />
-                        <span>{member.location}</span>
-                      </div>
-
-                      {/* Specialization */}
-                      <div className="bg-gray-50 rounded-lg p-3 mb-4">
-                        <p className="text-xs font-medium text-gray-600 mb-1">
-                          Specialization
-                        </p>
-                        <p className="text-sm font-semibold text-gray-900">
-                          {member.specialization}
-                        </p>
-                      </div>
-
-                      {/* Achievement */}
-                      <div className="flex items-start gap-2 text-sm text-gray-600">
-                        <Award className="w-4 h-4 text-yellow-500 flex-shrink-0 mt-0.5" />
-                        <span className="font-medium">
-                          {member.achievements}
-                        </span>
-                      </div>
                     </div>
 
                     {/* Corner Decoration */}

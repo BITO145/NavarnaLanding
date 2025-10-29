@@ -26,7 +26,7 @@ const Navigation = () => {
               <Link to="/it-ites" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
                 IT-ITES
               </Link>
-              <Link to="/fmcg" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
+              <Link to="https://fmcg.navarna.com/" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
                 FMCG
               </Link>
               <Link to="/staffing" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
