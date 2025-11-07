@@ -7,7 +7,6 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Categories from "@/components/Categories";
 import Industries from "@/components/Industries";
 import HowItWorks from "@/components/HowItWorks";
-import Team from "@/components/Team";
 import News from "@/components/News";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
@@ -28,7 +27,6 @@ const Index = () => {
       {/*<Categories />*/}
       <Industries />
       <HowItWorks />
-      <Team />
       <News />
       {/*<Newsletter />*/}
       <Footer />
