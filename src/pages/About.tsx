@@ -6,7 +6,6 @@ import {
   Zap, Shield, Globe, Building2, Briefcase, HeartHandshake,
   Eye, Crosshair, Factory, Code, UsersRound
 } from "lucide-react";
-import Team from "@/components/Team";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { useInView } from "motion/react";
@@ -622,7 +621,7 @@ const About = () => {
         </div>
       </section>
 
-      <Team />
+      
       <Footer />
     </div>
   );
